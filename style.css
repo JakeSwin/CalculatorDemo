@@ -1,0 +1,87 @@
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+body, html {
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(0.125turn, #95afc0, #535c68);
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    width: 500px;
+    height: 650px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: 
+    "display"
+    "keypad";
+    
+}
+
+.display {
+    grid-area: display;
+    background-color: #dff9fb;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+.display h1 {
+    margin: 0;
+    font-weight: 700;
+    color: #30336b;
+}
+
+.display h2 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    color: #95afc0;
+}
+
+.keypad {
+    grid-area: keypad;
+    background-color: #130f40;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1.5fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1.5fr;
+    padding: 1rem;
+    text-align: center;
+    color: #dff9fb;
+}
+
+.keypad div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    -moz-user-select: none;
+}
+
+.keypad div:hover {
+    background-color: #221d5e;
+    color: #40ced8;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.keypad div:active {
+    color: black;
+}
